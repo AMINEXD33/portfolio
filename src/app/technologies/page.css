@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "Inter";
+    src: url(../../../public/fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+.technomaster{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.ship{
+    width: 250px;
+    height: 100px;
+    background-color: rgb(35, 45, 63, 32%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shipsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    height: 210px;
+    padding: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+    width:auto;
+    overflow-y:auto;
+}
+.shipsContainer::-webkit-scrollbar {
+    width: 12px;
+}
+
+.shipsContainer::-webkit-scrollbar-track {
+    background: #696969;
+}
+
+.shipsContainer::-webkit-scrollbar-thumb {
+    background: #005B41;
+
+}
+
+.shipsContainer::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.shipsContainer::-webkit-scrollbar-button {
+    display: none;
+}
+.concepts{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding-left: 10%;
+    font-family: Inter;
+}
+.coceptsTitle{
+    color: #005B41;
+}

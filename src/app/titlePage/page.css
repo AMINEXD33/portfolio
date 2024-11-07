@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Inter";
+    src: url(../../../public/fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+.Bigtitle{
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.titlePageLetter{
+    font-family: "Inter";
+    font-weight: lighter;
+    font-size: larger;
+    font-style: italic;
+    color: #005B41;
+}
+.titlePageLetter:hover{
+    color: rgba(245, 222, 179, 0.486);
+}
+.normalBigTitle{
+    opacity: 0;
+}
+
+.activeBigTitle{
+    animation:  
+    goDown 0.4s alternate forwards ease-in-out 1,
+    glow 1s alternate forwards ease-in-out infinite; 
+    
+
+}
+@keyframes goDown {
+    from{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes glow {
+    from{
+        text-shadow: 5px 10px 10px #005B41;
+    }
+    to{
+        text-shadow: 5px 10px 40px #005B41;
+    }
+}
+.titlePageLetterActive{
+    animation: letterActive 1s alternate forwards ease-in-out;
+}
+@keyframes letterActive {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(5px);
+    }
+}
+.titlePageLetterUnactive{
+    animation: letterUnactive 1s alternate forwards ease-in-out;
+}
+@keyframes letterUnactive {
+    from{
+        transform: translateY(5px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
