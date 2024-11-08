@@ -31,6 +31,7 @@
     font-weight: bolder;
     font-size: 128px;
     animation:  popon 0.5s alternate forwards ease-in-out 1;
+    color: white;
 }
 .title3{
     display: flex;
@@ -95,5 +96,16 @@
     to{
         transform: translateX(0px);
         opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 1000px) and (min-width: 200px) {
+
+    .title2 > h1{
+        font-size: 90px;
+    }
+    .container{
+        padding: 10px;
     }
 }

@@ -71,3 +71,9 @@
         transform: translateY(0px);
     }
 }
+
+@media screen and (max-width: 1000px) and (min-width: 200px) {
+    .Bigtitle{
+        font-size: 50px;
+    }
+}

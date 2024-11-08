@@ -12,9 +12,27 @@
     justify-content: space-evenly
 
 }
+.aboutSection1, .aboutSection2, .aboutSection3{
+    opacity: 0;
+
+}
 .aboutSection1{
     display: flex;
     gap: 10px;
+}
+.animateWhenReady{
+    animation: apearFromTop 1s alternate forwards ease-in-out;
+}
+@keyframes apearFromTop {
+    from{
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
 }
 .aboutName{
     display: flex;
@@ -35,6 +53,7 @@
     background-color: rgb(35, 45, 63, 32%);
     padding: 10px;
     border-radius: 20px;
+    color: whitesmoke;
 }
 .abouttitle{
     color: #008170;
@@ -65,4 +84,8 @@
     padding: 5px;
     background-color: rgb(35, 45, 63, 32%);
     border-radius: 20px;
+    color: whitesmoke;
+}
+.intro{
+    color: whitesmoke;
 }

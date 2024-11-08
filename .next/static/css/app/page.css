@@ -90,6 +90,12 @@
         transform: translateY(0px);
     }
 }
+
+@media screen and (max-width: 1000px) and (min-width: 200px) {
+    .Bigtitle{
+        font-size: 50px;
+    }
+}
 /*!************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/firstPage/page.css ***!
   \************************************************************************************************************************************************************************************************************************************************************************/
@@ -126,6 +132,7 @@
     font-weight: bolder;
     font-size: 128px;
     animation:  popon 0.5s alternate forwards ease-in-out 1;
+    color: white;
 }
 .title3{
     display: flex;
@@ -192,6 +199,17 @@
         opacity: 1;
     }
 }
+
+
+@media screen and (max-width: 1000px) and (min-width: 200px) {
+
+    .title2 > h1{
+        font-size: 90px;
+    }
+    .container{
+        padding: 10px;
+    }
+}
 /*!**************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/aboutMePage/page.css ***!
   \**************************************************************************************************************************************************************************************************************************************************************************/
@@ -209,9 +227,27 @@
     justify-content: space-evenly
 
 }
+.aboutSection1, .aboutSection2, .aboutSection3{
+    opacity: 0;
+
+}
 .aboutSection1{
     display: flex;
     gap: 10px;
+}
+.animateWhenReady{
+    animation: apearFromTop 1s alternate forwards ease-in-out;
+}
+@keyframes apearFromTop {
+    from{
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    
 }
 .aboutName{
     display: flex;
@@ -232,6 +268,7 @@
     background-color: rgb(35, 45, 63, 32%);
     padding: 10px;
     border-radius: 20px;
+    color: whitesmoke;
 }
 .abouttitle{
     color: #008170;
@@ -262,6 +299,10 @@
     padding: 5px;
     background-color: rgb(35, 45, 63, 32%);
     border-radius: 20px;
+    color: whitesmoke;
+}
+.intro{
+    color: whitesmoke;
 }
 /*!***************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/technologies/page.css ***!
@@ -327,7 +368,9 @@
     width: 90%;
     padding-left: 10%;
     font-family: Inter;
+    color: whitesmoke;
 }
 .coceptsTitle{
     color: #005B41;
 }
+

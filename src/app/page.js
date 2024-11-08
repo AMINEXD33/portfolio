@@ -6,7 +6,7 @@ import TitlePage from "./titlePage/page";
 import FirstPage from "./firstPage/page";
 import AboutMePage from "./aboutMePage/page";
 import Technologies from "./technologies/page";
-const LIMIT = 5;
+const LIMIT = 6;
 
 export default function Home() {
   const [page, setPage] = useState(0);
@@ -78,6 +78,13 @@ export default function Home() {
         ElementAnimationCallBack={scrollingAnimationOne}
       >
         <Technologies/>
+      </PageIntety>
+
+      <PageIntety
+        rotation={rotation}
+        ElementAnimationCallBack={scrollingAnimationOne}
+      >
+        <TitlePage title={"Projects"} />
       </PageIntety>
     </div>
   );

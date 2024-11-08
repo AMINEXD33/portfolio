@@ -43,7 +43,10 @@ export default function TitlePage({title}){
         else{
             switchToUnactive(thisElement.current);
         }
-        
+        // in case this is a touch device
+        if ("ontouchstart" in document.documentElement) {
+            switchToActive(thisElement.current);
+        }
     })
     return(
         <dev ref={thisElement} className="Bigtitle normal">
