@@ -31,7 +31,7 @@ function addSpaces(words){
     }
     return newList;
 }
-export default function TitlePage({title}){
+export default function TitlePage({title=""}){
     let thisElement = useRef(null);
     let spaceCount = useRef(0);
     let titleList = title.split(" ");

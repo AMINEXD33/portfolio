@@ -41,11 +41,9 @@ export default function AboutMePage(){
     useEffect(()=>{
         if (elementIsVisibleInViewport(section1.current, false)){
             triggerAnimation(section1.current, section2.current, section3.current);
-            console.warn("DAAAAAMN");
         }
         else{
             cleanCLasses(section1.current, section2.current, section3.current);
-            console.warn("NOT VISIBLEEEEE");
         }
 
         // in case this is a touch device
