@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef } from "react";
 import elementIsVisibleInViewport from "../utils";
 import "./page.css";

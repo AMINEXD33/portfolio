@@ -1,3 +1,4 @@
+"use client";
 import "./page.css";
 import react from "../imgs/react.svg";
 import mysql from "../imgs/mysql.svg";
