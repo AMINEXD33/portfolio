@@ -1,0 +1,102 @@
+@font-face {
+    font-family: "Inter";
+    src: url(../../../app/fonts/GeistMonoVF.woff);
+}
+.project{
+    max-width: 900px;
+    min-width: 200px;
+    height: auto;
+    min-height: 200px;
+    background-color: rgb(35, 45, 63, 32%);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    font-family: "Inter";
+}
+
+.projectheader{
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+}
+.projecttitle{
+    font-size: xx-large;
+    color:#008170;
+    
+}
+.projectdate{
+    border-radius: 20px;
+    background-color: #008170;
+    width: fit-content;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+.desc{
+    max-width: 900px;
+    min-width: 200px;
+    word-break: break-all;
+    color: whitesmoke;
+}
+.projectfooter{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.technostitle, .gihubtitle{
+    color: #008170;
+}
+.technos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.techno{
+    width: 80px;
+    height: 20px;
+    background-color: #008170;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.githubBtn{
+    height: 40px;
+    width: 150px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    display: flex;
+    position: relative;
+}
+.gitIcon{
+    background-image: url(../../imgs/git.svg);
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.gihubstuff, .technoUsed{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.gitlink{
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+}

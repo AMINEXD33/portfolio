@@ -6,7 +6,8 @@ import TitlePage from "./titlePage/page";
 import FirstPage from "./firstPage/page";
 import AboutMePage from "./aboutMePage/page";
 import Technologies from "./technologies/page";
-const LIMIT = 6;
+import Projects from "./projects/page";
+const LIMIT = 7;
 
 export default function Home() {
   const [page, setPage] = useState(0);
@@ -25,9 +26,6 @@ export default function Home() {
     );
   }, [rotation]);
 
-  useEffect(() => {
-    console.warn("current page", page);
-  }, [page]);
 
   // just one time to at the start
   // check if we're a scrolling or toutching device
@@ -86,6 +84,14 @@ export default function Home() {
       >
         <TitlePage title={"Projects"} />
       </PageIntety>
+
+      <PageIntety
+        rotation={rotation}
+        ElementAnimationCallBack={scrollingAnimationOne}
+      >
+         <Projects/>
+      </PageIntety>
+     
     </div>
   );
 }
@@ -98,10 +104,8 @@ export default function Home() {
  */
 function goNextPage(current) {
   if (current + 1 >= LIMIT) {
-    console.warn("next page is ", LIMIT - 1); // Stay on the last page
     return LIMIT - 1;
   }
-  console.warn("next page is ", current + 1);
   return current + 1;
 }
 
@@ -113,10 +117,8 @@ function goNextPage(current) {
  */
 function goPrevPage(current) {
   if (current - 1 < 0) {
-    console.warn("prev page is ", 0); // Stay on the first page
     return 0;
   }
-  console.warn("prev page is ", current - 1);
   return current - 1;
 }
 
@@ -137,7 +139,6 @@ function pageTransitionTrigger(pageElement, targetPage) {
  * @param {*} rotation the value of the rotation or (animation stage tracker)
  */
 function scrollingAnimationOne(element, rotation) {
-  console.log("element", element);
   if (element) {
     if (rotation < 0) {
       element.style.filter = `blur(${rotation * -1}px)`;
@@ -159,15 +160,13 @@ function scrollingAnimationOne(element, rotation) {
  */
 function handleScrolling(event, rotation, setRotation, scrollLock) {
   function shouldIskipThis(event){
-    const skipableClasses = ["ship", "shipsContainer", "shipimg"];
+    const skipableClasses = ["ship", "shipsContainer", "shipimg", "scroller", "project", "skip"];
     const werePointingOn = document.elementFromPoint(event.clientX, event.clientY);
     for (let x = 0; x < skipableClasses.length; x++){
       if (werePointingOn.classList.contains(skipableClasses[x])){
-        console.warn("skipable")
         return true;
       }
     }
-    console.warn("notskipable")
     return false;
   }
   if (shouldIskipThis(event)){
@@ -215,7 +214,6 @@ function transitionRule(
     setTimeout(() => {
       setScrollLock(false);
     }, 500);
-    console.warn("+readjusting pageRef", targetPage);
   } else if (rotation <= -10) {
     const targetPage = goPrevPage(page);
     setPage(targetPage);
@@ -225,7 +223,6 @@ function transitionRule(
     setTimeout(() => {
       setScrollLock(false);
     }, 500);
-    console.warn("+readjusting pageRef", targetPage);
   }
 }
 
